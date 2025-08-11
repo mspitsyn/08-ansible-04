@@ -23,7 +23,7 @@ Playbook разворачивает на заданных в файле `invento
 ## Запуск проекта 
 Для стягивания `roles` перейти в каталог `playbook/` и выполнить команду:
 ```
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r requirements.yml --roles-path="roles/"
 ```   
 В файле `inventory/prod.yml` необходимо указать IP-адреса машин на который будут разворачиваться сервисы.  
 ```yaml
