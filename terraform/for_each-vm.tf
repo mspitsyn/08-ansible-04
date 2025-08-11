@@ -1,6 +1,6 @@
 #считываем данные об образе ОС
-data "yandex_compute_image" "debian-12" {
-  family = "debian-12"
+data "yandex_compute_image" "ubuntu-2004-lts" {
+  family = "ubuntu-2004-lts"
 }
 
 variable "each_vm" {
@@ -44,7 +44,7 @@ resource "yandex_compute_instance" "for_each" {
     }
     boot_disk {
     initialize_params {
-      image_id = data.yandex_compute_image.debian-12.image_id
+      image_id = data.yandex_compute_image.ubuntu-2004-lts.image_id
     }
   }
 
