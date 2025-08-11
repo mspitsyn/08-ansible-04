@@ -1,0 +1,24 @@
+---
+- name: Install Clickhouse
+  hosts: clickhouse
+  remote_user: ubuntu
+  gather_facts: false
+  roles:
+    - role: clickhouse
+      tags: clickhouse
+
+- name: Install Vector
+  hosts: vector
+  gather_facts: false
+  remote_user: ubuntu
+  roles:
+    - role: vector
+      tags: vector
+
+- name: Install Lighthouse
+  hosts: lighthouse
+  gather_facts: false
+  remote_user: ubuntu
+  roles:
+    - role: lighthouse
+      tags: lighthouse

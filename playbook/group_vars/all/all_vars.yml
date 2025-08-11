@@ -1,0 +1,7 @@
+---
+all_clickhouse_table: "logs_table"
+all_clickhouse_db: "logs"
+all_clickhouse_url: "http://84.252.129.153:8123"
+
+ansible_os_family: debian
+ansible_pkg_mgr: apt
